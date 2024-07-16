@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - 3</title>
+</head>
+<style>
+   body {
+  background-image: linear-gradient(to bottom right, rgb(255, 119, 0), rgb(255, 255, 255), rgb(15, 84, 0));
+}
+
+.center{
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#clock{
+    font-size: 40px;
+    background-color: rgb(0, 0, 138);
+    color:white;
+    padding:20px 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <div class="center">
+        <h1>Respected Cadet Ananya Dey</h1>
+        <h3>We Salute your efforts everyday! You will have a great day</h3>
+        <div id="banner"><span>Jai Hind!</span></div>
+        <div id="clock"></div>
+    </div>
+
+   
+</body>
+
+<script>
+    const clock = document.getElementById("clock")
+
+    setInterval(function(){
+    let date = new Date()
+    // console.log(date.toLocaleTimeString());
+    clock.innerHTML = date.toLocaleTimeString();
+    },1000)
+</script>
+</html>
